@@ -46,16 +46,16 @@ namespace AplicacionNueva.Controllers
         // GET: Personas/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(Persona.Get(new Persona() { Id = id }));
         }
 
         // POST: Personas/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Persona val)
         {
             try
             {
-                // TODO: Add update logic here
+                val.Update();
 
                 return RedirectToAction("Index");
             }
