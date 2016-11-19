@@ -11,6 +11,7 @@ namespace AplicacionNueva
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public readonly static string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PruebaConnection"].ConnectionString;
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
