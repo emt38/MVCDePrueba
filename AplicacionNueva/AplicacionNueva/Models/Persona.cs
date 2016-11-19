@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MagnaDB;
+using System.ComponentModel.DataAnnotations;
 
 namespace AplicacionNueva.Models
 {
@@ -29,6 +30,7 @@ namespace AplicacionNueva.Models
         
         [DateTimeType(DateTimeSpecification.Date)]
         [ColumnName("FechaNacimiento")]
+        [DataType(DataType.Date)]
         public DateTime? Fecha { get; set; }
 
         [DMLIgnore]
